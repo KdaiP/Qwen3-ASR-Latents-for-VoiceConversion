@@ -1,0 +1,7 @@
+torch
+torchaudio
+
+librosa
+soundfile
+
+transformers==5.4.0
