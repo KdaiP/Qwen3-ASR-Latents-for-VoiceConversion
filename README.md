@@ -79,6 +79,25 @@ embedding = model.forward(audio, sample_rate)
 print('Embedding shape: ', embedding.shape)
 ```
 
+
+## (Optional) Verify Embedding Consistency
+
+To prevent embedding drift when upgrading `transformers`, `torch`, or other dependencies, we provide two verification scripts.
+
+1. **Generate reference embeddings:** Run the script below to save baseline embedding outputs to `examples/features/*.pt`.
+
+```bash
+python tools/save_example_features.py
+```
+
+We have already extracted the embeddings, you can skip this step..
+
+2. **Verify consistency**: After updating your environment, compare the new outputs against your saved references to ensure reproducibility:
+
+```bash
+python tools/compare_example_features.py
+```
+
 ## License
 
 This project is licensed under the Apache License 2.0.

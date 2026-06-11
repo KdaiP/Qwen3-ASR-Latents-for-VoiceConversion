@@ -1,0 +1,14 @@
+{
+  "audio_path": "examples\\audios\\test1.wav",
+  "sample_rate": 24000,
+  "embedding_shape": [
+    1024,
+    180
+  ],
+  "embedding_dtype": "torch.bfloat16",
+  "versions": {
+    "torch": "2.10.0+cu128",
+    "torchaudio": "2.10.0+cpu",
+    "transformers": "5.4.0"
+  }
+}
